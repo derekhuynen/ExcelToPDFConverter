@@ -54,4 +54,16 @@ public class ApachePOIExcelWrite {
 
         System.out.println("Done");
     }
+
+
+
+    String dataDir = Utils.getSharedDataDir(Excel2PDFConversion.class) + "loading_saving/";
+
+    Workbook workbook = new Workbook(dataDir + "Book1.xls");
+
+// Save the document in PDF format
+workbook.save(dataDir + "E2PDFC-out.pdf", SaveFormat.PDF);
+
+// Print message
+System.out.println("Excel to PDF conversion performed successfully.");
 }
